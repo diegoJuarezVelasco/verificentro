@@ -10,11 +10,23 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+   @font-face {
+    font-family: 'bebas_neueregular';
+    src: url('../fonts/bebasneue-regular-webfont.woff2') format('woff2'),
+         url('../fonts/bebasneue-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
 
 html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+  font-family: 'Lato', sans-serif;
+}
+body {
+  background-color: #f5f6f7;
 }
 
 /*
@@ -49,6 +61,12 @@ hr {
   margin: 1em 0;
   padding: 0;
 }
+h1 {
+  font-family: 'bebas_neueregular';
+  font-style: italic;
+  line-height: 1;
+  
+}
 
 /*
  * Remove the gap between audio, canvas, iframes,
@@ -64,7 +82,9 @@ svg,
 video {
   vertical-align: middle;
 }
-
+img {
+  max-width: 100%;
+}
 /*
  * Remove default fieldset styles.
  */
@@ -86,6 +106,302 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+/* clases globales */
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+
+
+   /*header*/
+
+.contenedor-header {
+  
+  max-width: 100%;
+  background-color: #fff;
+  /* height: 100px; */
+  box-shadow: 0 2px 8px 0 rgba(16,7,104,.07);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  
+}
+.imagen-header {
+  padding: 6px;
+  margin: 0;
+  display: inline-block;
+  
+}
+.logo-verificacion {
+  width: 150px;
+  
+}
+
+/*Navegacion*/
+.navegacion-principal {
+  
+  display: none;
+  border-top: 2px solid #2ea3f2;
+  padding: 5px 0 10px 0;
+  background-color: #ffff; 
+
+ 
+}
+.navegacion-principal ul {
+  padding: 0px;
+}
+.navegacion-principal ul li {
+  list-style: none;
+  padding: 0 4px 0 4px;
+}
+
+.navegacion-principal a {
+  color: #000;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  padding: 12px;
+  display: block;
+  font-weight: bold;
+  
+  /* text-align: center; */
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.5s ease-out;
+}
+.navegacion-principal a:hover {
+  background-color:rgba(0,0,0,.1);
+  color: rgba(0,0,0,.5);
+}
+
+@media only screen and (min-width: 600px) {
+  .navegacion-principal {
+    display: block; 
+    border-top: none;
+    float: right;
+    margin-right: 100px;
+  }
+  .navegacion-principal a {
+    margin-right: 10px;
+    margin-left: 10px;  
+    display: inline-block;
+    transition: all 0.5s ease-out;
+  }
+  .navegacion-principal a:first-child {
+    margin-left: 30px;
+  }
+  .navegacion-principal a:hover {
+    color: #2ea3f2;
+  }
+  .navegacion-principal a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #2ea3f2;
+    transition: width 0.5s;
+  }
+  .navegacion-principal a:hover::after {
+    width: 100%;
+  }
+  .navegacion-principal a:last-child {
+    border: none;
+  }
+}
+
+/*Menu-movil*/
+div.menu-movil {
+  width: 30px;
+  display: block;
+  float: right;
+  text-align: right;
+  margin: 38px 20px 0px 0;
+}
+div.menu-movil:hover {
+  cursor: pointer;
+}
+div.menu-movil span {
+  height: 4px;
+  border-radius: 20px;
+  margin-bottom: 6px;
+  background-color: #2ea3f2;
+  display: block;
+}
+@media only screen and (min-width: 600px) {
+  div.menu-movil {
+    display: none;
+  }
+}
+/* img header*/
+.img-banner {
+  height: 90vh;
+  max-width: 100%;
+  position: relative;
+  /* background-image: url(../img/banner2.jpg); */
+  background-size: cover;
+  /* background-attachment: fixed; */
+  margin-top: 78px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(../img/banner2.jpg);
+}
+
+.banner-text {
+  font-family: 'bebas_neueregular';
+  color: #e2e2e2;
+  font-size: 1.8rem;
+  font-style: italic;
+  position: absolute;
+  top: 5%;
+  left: 2%;
+}
+.banner-text h1 {
+  margin: 0;
+  line-height: 1;
+  
+}
+.banner-text h6 {
+  font-family: 'lato', sans-serif;
+  color: rgb(144, 198, 58);
+  margin: 0;
+  font-size: 1.1rem;
+  position: absolute;
+  left: 16px;
+
+}
+.boton-cita {
+  width: 150px;
+  height: 60px;
+  background-color: #2ea3f2;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: skewX(-22deg) translate(-50%, -60%);
+}
+
+.boton-cita a {
+  font-family: 'bebas_neueregular';
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-style: italic;
+  letter-spacing: 2px;
+}
+.banner-text2 {
+  position: absolute;
+  left: 50%;
+  top: 95%;
+  transform: translate(-50%, -95%);
+  color: #fff;
+  text-align: center;
+
+}
+.banner-text2 p {
+  margin: 0 0 5px 0;
+}
+.banner-text2 p:first-child {
+  font-weight: bold;
+}
+.logo-whatsapp {
+  width: 32px;
+  /* height: 64px; */
+  display: inline-block;
+  margin-top: 3px;
+}
+/*Calendario vehicular*/
+.contenedor-calendario h1 {
+  font-size: 3.5rem;
+  color: rgb(144, 198, 58);
+}
+
+
+/* contacto */
+
+/*Horarios*/
+.contenedor-calendario {
+  padding: 0 10px;
+}
+.contenedor-horarios h1 {
+  font-size: 2.5rem;
+  color: #4A4A4A;
+}
+.contenedor-horarios h2 {
+  font-weight: 400;
+}
+.contenedor-horarios h2 span {
+  font-weight: bold;
+}
+
+
+/* Mapa */
+.contenedor-contacto {
+  /* height: 1000px; */
+  margin-top: 100px;
+  padding: 0 10px;
+}
+#map {
+  width: 100%;
+  height: 600px;
+}
+/*Gaceta*/
+.contenedor-gaceta {
+  padding: 0 10px;
+
+}
+
+.contenedor-gaceta h1 {
+  font-size: 2.5rem;
+  color: #4A4A4A;
+}
+
+
+
+/*Footer*/
+#logo-edomex {
+  width: 100px;
+}
+.logo-footer {
+  text-align: center;
+}
+.contenedor-footer {
+  height: 150px;
+  background-color: #222;
+  position: relative;
+}
+.aviso-privacidad a {
+  color: white;
+}
+.aviso-privacidad {
+  position: absolute;
+  bottom: 0%;
+  right: 3%;
+  padding: 5px 10px;
+}
+.derechos-footer{
+  color: #fff;
+  position: absolute;
+  bottom: 5%;
+  padding: 0 10px;
+}
+
+/*Logo fijo de redes */
+.logo-redes {
+  display: inline-block;
+  position: fixed;
+  bottom: 20px;
+  right: 4px;
+  z-index: 1000;
+}
+
+
+.logo-redes a img {
+  width: 56px;
+  height: 64px;
+}
+
 
 /* ==========================================================================
    Helper classes
