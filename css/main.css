@@ -176,7 +176,7 @@ textarea {
   color: rgba(0,0,0,.5);
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 894px) {
   .navegacion-principal {
     display: block; 
     border-top: none;
@@ -187,6 +187,8 @@ textarea {
     margin-right: 10px;
     margin-left: 10px;  
     display: inline-block;
+    font-style: italic;
+  
     transition: all 0.5s ease-out;
   }
   .navegacion-principal a:first-child {
@@ -194,6 +196,7 @@ textarea {
   }
   .navegacion-principal a:hover {
     color: #2ea3f2;
+    background-color: #fff;
   }
   .navegacion-principal a::after {
     content: "";
@@ -209,6 +212,10 @@ textarea {
   .navegacion-principal a:last-child {
     border: none;
   }
+  .navegacion-principal ul li {
+    display: inline-block;
+  }
+
 }
 
 /*Menu-movil*/
@@ -229,14 +236,14 @@ div.menu-movil span {
   background-color: #2ea3f2;
   display: block;
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 894px) {
   div.menu-movil {
     display: none;
   }
 }
 /* img header*/
 .img-banner {
-  height: 90vh;
+  height: 100vh;
   max-width: 100%;
   position: relative;
   /* background-image: url(../img/banner2.jpg); */
@@ -280,8 +287,12 @@ div.menu-movil span {
   justify-content: center;
   align-items: center;
   transform: skewX(-22deg) translate(-50%, -60%);
+  transition: all ease-in .3s;
 }
+.boton-cita:hover {
+  background-color: #0167b6;
 
+}
 .boton-cita a {
   font-family: 'bebas_neueregular';
   text-decoration: none;
@@ -290,6 +301,34 @@ div.menu-movil span {
   font-style: italic;
   letter-spacing: 2px;
 }
+
+.boton-como-llegar {
+  width: 150px;
+  height: 60px;
+  background-color: rgb(144, 198, 58);;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: skewX(-22deg) translate(-50%, -40%);
+  transition: all ease-in .3s;
+
+}
+.boton-como-llegar:hover {
+  background-color: rgb(66, 169, 49);
+
+}
+.boton-como-llegar a {
+  font-family: 'bebas_neueregular';
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-style: italic;
+  letter-spacing: 2px;
+}
+
 .banner-text2 {
   position: absolute;
   left: 50%;
@@ -297,7 +336,7 @@ div.menu-movil span {
   transform: translate(-50%, -95%);
   color: #fff;
   text-align: center;
-
+  font-size: 1.1rem;
 }
 .banner-text2 p {
   margin: 0 0 5px 0;
@@ -305,6 +344,49 @@ div.menu-movil span {
 .banner-text2 p:first-child {
   font-weight: bold;
 }
+@media only screen and (min-width: 342px) {
+  .banner-text2 {
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -90%);
+    text-align: center;
+  
+  }
+}
+@media only screen and (min-width: 368px) {
+  .banner-text2 {
+      left: 50%;
+      top: 87%;
+      transform: translate(-50%, -87%);
+
+  }
+}
+@media only screen and (min-width: 495px) {
+  .banner-text2 {
+    font-size: 1.2rem;
+
+  }
+}
+@media only screen and (min-width: 777px) {
+  .banner-text2 {
+    font-size: 1.3rem;
+
+  }
+}
+@media only screen and (min-width: 840px) {
+  .banner-text2 {
+    font-size: 1.4rem;
+
+  }
+}
+@media only screen and (min-width: 903px){
+  .banner-text2 {
+    left: 50%;
+    top: 84%;
+    transform: translate(-50%, -84%);
+}
+}
+
 .logo-whatsapp {
   width: 32px;
   /* height: 64px; */
@@ -312,18 +394,22 @@ div.menu-movil span {
   margin-top: 3px;
 }
 /*Calendario vehicular*/
+
+
+.contenedor-calendario {
+  padding: 40px 15px;
+  max-width: 100%;
+  /* margin: 50px 0; */
+  background-image: url(/img/background.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
 .contenedor-calendario h1 {
   font-size: 3.5rem;
   color: rgb(144, 198, 58);
+  margin: 0 0 25px 0;
 }
 
-
-/* contacto */
-
-/*Horarios*/
-.contenedor-calendario {
-  padding: 0 10px;
-}
 .contenedor-horarios h1 {
   font-size: 2.5rem;
   color: #4A4A4A;
@@ -334,30 +420,119 @@ div.menu-movil span {
 .contenedor-horarios h2 span {
   font-weight: bold;
 }
+@media only screen and (min-width: 992px) {
+  .imagen-calendario {
+    width: 70%;
+    margin: 0 auto;
+    
+  }
+  
 
+}
 
 /* Mapa */
 .contenedor-contacto {
   /* height: 1000px; */
-  margin-top: 100px;
-  padding: 0 10px;
+  /* margin: 100px 0; */
+  max-width: 100%;
+  padding: 40px 15px;
+  background-image: url(/img/background2.png);
+  background-size: cover;
+  background-attachment: fixed;
 }
+
+#marker-logo {
+  width: 42px;
+  margin-right: 5px;
+}
+.direccion p {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.direccion p span {
+  display: inline-block;
+  margin-left: 50px;
+  font-weight: normal;
+}
+
+
 #map {
   width: 100%;
   height: 600px;
 }
-/*Gaceta*/
-.contenedor-gaceta {
-  padding: 0 10px;
+@media only screen and (min-width: 992px) {
+  .contenedor-contacto {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #map {
+    width: 550px;
+  }
+}
+@media only screen and (min-width: 1160px) {
 
+  #map {
+    width: 700px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+
+  #map {
+    width: 800px;
+  }
 }
 
+/*Gaceta*/
+
+.contenedor-gaceta {
+  max-width: 100%;
+  padding: 40px 15px;
+  /* margin: 100px 0 ; */
+  background-image: url(/img/background3.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.gaceta-pdf {
+  width:100%; 
+  height: 1000px;
+  max-width: 100%;
+}
 .contenedor-gaceta h1 {
   font-size: 2.5rem;
   color: #4A4A4A;
 }
+#logo-pdf {
+  width: 20px;
+}
+.links-hologramas {
+  padding: 0 10px;
+}
+.holograma-doble-cero{
+  padding: 0 10px;
+  text-align: center;
+  margin: 50px 0;
+  
+}
 
-
+.holograma-exento {
+  padding: 0 10px;
+  text-align: center;
+  margin: 50px 0;
+}
+.boton-holograma {
+  -webkit-appearance: none;
+  background-color: #029777;
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 6px;
+  -webkit-box-shadow: 9px 11px 9px 1px rgba(2,151,119,0.44); 
+  box-shadow: 9px 11px 9px 1px rgba(2,151,119,0.44);
+  transition: all ease-in .3s;
+  border: none;
+}
+.boton-holograma:hover {
+  background-color: #04644f;
+}
 
 /*Footer*/
 #logo-edomex {
@@ -367,24 +542,22 @@ div.menu-movil span {
   text-align: center;
 }
 .contenedor-footer {
-  height: 150px;
+  height: 200px;
   background-color: #222;
-  position: relative;
+  
 }
 .aviso-privacidad a {
   color: white;
 }
 .aviso-privacidad {
-  position: absolute;
-  bottom: 0%;
-  right: 3%;
-  padding: 5px 10px;
+  text-align: center;
 }
 .derechos-footer{
   color: #fff;
-  position: absolute;
-  bottom: 5%;
-  padding: 0 10px;
+  text-align: center;
+}
+.derechos-footer p {
+  margin: 40px 0 0 0
 }
 
 /*Logo fijo de redes */
@@ -403,6 +576,15 @@ div.menu-movil span {
 }
 
 
+/*aviso de privacidad */
+.aviso-de-privacidad {
+  margin-top: 130px;
+}
+.aviso-de-privacidad h1 {
+  margin: 100px 0;
+  text-align: center;
+
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
