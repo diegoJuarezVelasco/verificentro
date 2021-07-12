@@ -256,11 +256,17 @@ div.menu-movil span {
 .banner-text {
   font-family: 'bebas_neueregular';
   color: #e2e2e2;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   font-style: italic;
   position: absolute;
   top: 5%;
   left: 2%;
+}
+@media only screen and (min-width: 350px) {
+  .banner-text {
+    font-size: 1.7rem;
+  }
+
 }
 .banner-text h1 {
   margin: 0;
@@ -305,7 +311,7 @@ div.menu-movil span {
 .boton-como-llegar {
   width: 150px;
   height: 60px;
-  background-color: rgb(144, 198, 58);;
+  background-color: rgb(144, 198, 58);
   position: absolute;
   left: 50%;
   top: 40%;
@@ -400,9 +406,10 @@ div.menu-movil span {
   padding: 40px 15px;
   max-width: 100%;
   /* margin: 50px 0; */
-  background-image: url(/img/background.png);
-  background-size: cover;
-  background-attachment: fixed;
+  /* background-image: url(/img/background.png); */
+  background: rgb(234,234,241);
+  
+  
 }
 .contenedor-calendario h1 {
   font-size: 3.5rem;
@@ -436,9 +443,11 @@ div.menu-movil span {
   /* margin: 100px 0; */
   max-width: 100%;
   padding: 40px 15px;
-  background-image: url(/img/background2.png);
-  background-size: cover;
-  background-attachment: fixed;
+  /* background-image: url(/img/background2.png); */
+  background: rgb(234,234,241);
+  background: linear-gradient(100deg, rgba(234,234,241,1) 33%, rgba(218,218,221,1) 23%);  
+  
+  /* background-attachment: fixed; */
 }
 
 #marker-logo {
@@ -488,9 +497,12 @@ div.menu-movil span {
   max-width: 100%;
   padding: 40px 15px;
   /* margin: 100px 0 ; */
-  background-image: url(/img/background3.png);
-  background-size: cover;
-  background-attachment: fixed;
+  /* background-image: url(/img/background3.png); */
+  /* background-image: linear-gradient(110deg,#eaeaf1 86%,#843a7b 0%); */
+   background: rgb(234,234,241);
+  background: linear-gradient(109deg, rgba(234,234,241,1) 81%, #64275d 81%);
+  
+  
 }
 .gaceta-pdf {
   width:100%; 
@@ -578,12 +590,15 @@ div.menu-movil span {
 
 /*aviso de privacidad */
 .aviso-de-privacidad {
-  margin-top: 130px;
+  margin: 130px 0;
 }
 .aviso-de-privacidad h1 {
   margin: 100px 0;
   text-align: center;
+}
 
+#adobe-dc-view2 {
+  margin: 0 auto;
 }
 /* ==========================================================================
    Helper classes
